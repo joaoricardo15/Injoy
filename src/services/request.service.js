@@ -1,7 +1,7 @@
 import Request from "axios";
 
 //const serverUrl = "http://localhost:5000/";
-const serverUrl = "http://injoy.us-east-1.elasticbeanstalk.com";
+const serverUrl = "https://injoy.us-east-1.elasticbeanstalk.com";
 
 const serverRequest = Request.create({ baseURL: serverUrl });
 
