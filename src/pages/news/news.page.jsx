@@ -15,8 +15,8 @@ const NewsPage = () => {
 
   const updateNews = (keyWord, category) => {
     setFetching(true);
-    getNews(keyWord, category).then((result) => {
-      setNews(result.data);
+    getNews(keyWord, category).then((news) => {
+      setNews(news);
       setFetching(false);
     });
   };
