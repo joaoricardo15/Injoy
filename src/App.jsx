@@ -48,7 +48,6 @@ const App = () => {
             style={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "flex-end",
               padding: 10,
             }}
           >
@@ -56,8 +55,8 @@ const App = () => {
               style={{
                 flex: 1,
                 fontSize: 10,
-                textAlign: "center",
-                marginRight: 10,
+                textAlign: "end",
+                marginRight: 20,
               }}
               color="textSecondary"
             >
