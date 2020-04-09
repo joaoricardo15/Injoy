@@ -3,7 +3,7 @@ import SwipeableViews from "react-swipeable-views";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import { Button } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import GetAppIcon from "@material-ui/icons/GetApp";
 import NewsPage from "./pages/news/news.page";
 import PageMemes from "./pages/memes/memes.page";
@@ -45,8 +45,24 @@ const App = () => {
       <div>
         {installation && (
           <div
-            style={{ display: "flex", justifyContent: "flex-end", padding: 10 }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-end",
+              padding: 10,
+            }}
           >
+            <Typography
+              style={{
+                flex: 1,
+                fontSize: 10,
+                textAlign: "center",
+                marginRight: 10,
+              }}
+              color="textSecondary"
+            >
+              Gostaria de uma experiência de app?
+            </Typography>
             <Button
               color="primary"
               variant="outlined"
