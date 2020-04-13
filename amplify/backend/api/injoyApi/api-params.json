@@ -1,0 +1,70 @@
+{
+    "paths": [
+        {
+            "name": "/tweets",
+            "lambdaFunction": "lambdaTweets",
+            "privacy": {
+                "open": true
+            }
+        },
+        {
+            "name": "/memes",
+            "lambdaFunction": "lambdaMemes",
+            "privacy": {
+                "open": true
+            }
+        },
+        {
+            "name": "/news",
+            "lambdaFunction": "lambdaNews",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "injoyApi",
+    "apiName": "injoyApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "lambdaTweets"
+        },
+        {
+            "lambdaFunction": "lambdaMemes"
+        },
+        {
+            "lambdaFunction": "lambdaNews"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-injoy-prod-150922-authRole",
+        "unAuthRoleName": "amplify-injoy-prod-150922-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "lambdaTweets",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "lambdaMemes",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "lambdaNews",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

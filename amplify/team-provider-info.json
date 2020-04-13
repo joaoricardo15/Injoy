@@ -1,0 +1,15 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-injoy-prod-150922-authRole",
+            "UnauthRoleArn": "arn:aws:iam::514311354050:role/amplify-injoy-prod-150922-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::514311354050:role/amplify-injoy-prod-150922-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-injoy-prod-150922-deployment",
+            "UnauthRoleName": "amplify-injoy-prod-150922-unauthRole",
+            "StackName": "amplify-injoy-prod-150922",
+            "StackId": "arn:aws:cloudformation:us-east-1:514311354050:stack/amplify-injoy-prod-150922/e9b88990-7db1-11ea-b052-0e05d1a3c102",
+            "AmplifyAppId": "d28dxwvxqh2n0y"
+        }
+    }
+}

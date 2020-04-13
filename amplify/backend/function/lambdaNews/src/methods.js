@@ -1,11 +1,6 @@
-import Request from "axios";
+var axios = require("axios");
 
-//const serverUrl = "http://localhost:5000/";
-const serverUrl = "https://qtyhhoy6tg.execute-api.us-east-1.amazonaws.com/prod";
-
-const serverRequest = Request.create({ baseURL: serverUrl });
-
-export const getNews = (keyWord, category) => {
+function getNews(query, category) {
   const newsApiUrl = "https://newsapi.org/v2/";
   const newsApiToken = "ed62172b723f4a598514e9a0aec3d2ae";
   const newsApiHeaders = { Accept: "application/json" };
@@ -16,9 +11,9 @@ export const getNews = (keyWord, category) => {
     pageSize: 30
   };
 
-  if (keyWord) {
+  if (query) {
     url = "everything";
-    params.q = keyWord;
+    params.q = query;
     params.language = "pt";
     params.sortBy = "popularity";
   } else {
@@ -36,12 +31,13 @@ export const getNews = (keyWord, category) => {
   }
 
   return new Promise((resolve, reject) => {
-    Request.request({
-      url: url,
-      baseURL: newsApiUrl,
-      headers: newsApiHeaders,
-      params: params
-    })
+    axios
+      .request({
+        url: url,
+        baseURL: newsApiUrl,
+        headers: newsApiHeaders,
+        params: params
+      })
       .then(result => {
         if (result.status === 200) {
           resolve(result.data.articles);
@@ -51,22 +47,6 @@ export const getNews = (keyWord, category) => {
         reject(error);
       });
   });
-};
+}
 
-export const getTweets = keyWord => {
-  return serverRequest.request({
-    url: "/tweets",
-    params: {
-      q: keyWord
-    }
-  });
-};
-
-export const getMemes = keyWord => {
-  return serverRequest.request({
-    url: "/memes",
-    params: {
-      q: keyWord
-    }
-  });
-};
+module.exports = { getNews };
