@@ -12,7 +12,7 @@ import CardInstallComponent from "./components/cardInstall/cardInstall.component
 import "./App.css";
 
 const App = () => {
-  const [tab, setTab] = useState(null);
+  const [tab, setTab] = useState(0);
 
   const handleTabChange = (event, tabValue) => {
     setTab(tabValue);
@@ -97,9 +97,9 @@ const App = () => {
 
   return (
     <div className="container">
-      <ThemeProvider theme={theme}>
+      {/* <ThemeProvider theme={theme}>
         <ChatBot steps={steps} {...config} opened={tab === null} />
-      </ThemeProvider>
+      </ThemeProvider> */}
       {tab !== null && (
         <>
           <AppBar position="static" color="default">
