@@ -1,9 +1,9 @@
-import Request from "axios";
+import axios from "axios";
 
-//const serverUrl = "http://localhost:5000/";
-const serverUrl = "https://qtyhhoy6tg.execute-api.us-east-1.amazonaws.com/prod";
+// const serverUrl = 'http://localhost:3000/dev/';
+const serverUrl = 'https://2lyr80nvp3.execute-api.us-east-1.amazonaws.com/prod';
 
-const serverRequest = Request.create({ baseURL: serverUrl });
+const serverRequest = axios.create({ baseURL: serverUrl });
 
 export const getNews = (keyWord, category) => {
   const params = {};
